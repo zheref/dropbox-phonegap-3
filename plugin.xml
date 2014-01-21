@@ -35,7 +35,6 @@
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBTable.h" target-dir="Dropbox.framework/Headers" framework="true" />
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBUtil.h" target-dir="Dropbox.framework/Headers" framework="true" />
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/Dropbox.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework" framework="true" />
         <framework src="libc++.dylib" />
         <framework src="QuartzCore.framework" />
         <framework src="SystemConfiguration.framework" />
