@@ -18,14 +18,14 @@
         <header-file src="src/ios/Plugins/DropboxPlugin.h" />
         <source-file src="src/ios/Plugins/DropboxPlugin.m" />
         <source-file src="src/ios/Frameworks/Dropbox.framework" framework="true" />
-        <framework src="libc++.dylib">
-        <framework src="QuartzCore.framework">
-        <framework src="SystemConfiguration.framework">
-        <framework src="Security.framework">
-        <framework src="CFNetwork.framework">
-        <framework src="CoreLocation.framework">
-        <framework src="AssetsLibrary.framework">
-        <framework src="CoreGraphics.framework">
-        <framework src="MobileCoreServices.framework">
+        <framework src="libc++.dylib" />
+        <framework src="QuartzCore.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="Security.framework" />
+        <framework src="CFNetwork.framework" />
+        <framework src="CoreLocation.framework" />
+        <framework src="AssetsLibrary.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="MobileCoreServices.framework" />
     </platform>
 </plugin>
