@@ -17,7 +17,6 @@
         <source-file src="src/ios/Classes/AppDelegate.m" target-dir="AppDelegate.m" />
         <header-file src="src/ios/Plugins/DropboxPlugin.h" />
         <source-file src="src/ios/Plugins/DropboxPlugin.m" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework" framework="true" />
         <source-file src="src/ios/Frameworks/Dropbox.framework/Dropbox" target-dir="Dropbox.framework" framework="true" />
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccount.h" target-dir="Dropbox.framework/Headers" framework="true" />
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccountInfo.h" target-dir="Dropbox.framework/Headers" framework="true" />
@@ -36,6 +35,7 @@
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBTable.h" target-dir="Dropbox.framework/Headers" framework="true" />
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBUtil.h" target-dir="Dropbox.framework/Headers" framework="true" />
         <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/Dropbox.h" target-dir="Dropbox.framework/Headers" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework" framework="true" />
         <framework src="libc++.dylib" />
         <framework src="QuartzCore.framework" />
         <framework src="SystemConfiguration.framework" />
