@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="net.zheref.dropbox" version="0.1.0">
+	<name>ZherefDropboxSync</name>
+    <description>Plugin to sync with Dropbox account filesystem</description>
+    <author>Sergio Daniel Lozano (@zheref)</author>
+    <license>Apache 2.0</license>
+    <keywords>cordova,dropbox,sync</keywords>
+    <js-module src="www/dropbox.js" name="Dropbox">
+        <clobbers target="dropbox" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Dropbox">
+            	<param name="ios-package" value="DropboxPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/Classes/AppDelegate.m" />
+        <header-file src="src/ios/Plugins/DropboxPlugin.h" />
+        <source-file src="src/ios/Plugins/DropboxPlugin.m" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework" framework="true" />
+        <framework src="libc++.dylib">
+        <framework src="QuartzCore.framework">
+        <framework src="SystemConfiguration.framework">
+        <framework src="Security.framework">
+        <framework src="CFNetwork.framework">
+        <framework src="CoreLocation.framework">
+        <framework src="AssetsLibrary.framework">
+        <framework src="CoreGraphics.framework">
+        <framework src="MobileCoreServices.framework">
+    </platform>
+</plugin>
