@@ -18,24 +18,24 @@
         <header-file src="src/ios/Plugins/DropboxPlugin.h" />
         <source-file src="src/ios/Plugins/DropboxPlugin.m" />
         <source-file src="src/ios/Frameworks/Dropbox.framework" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Dropbox" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccount.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccountInfo.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccountManager.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastore.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastoreInfo.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastoreManager.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBError.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFile.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFileInfo.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFileStatus.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFilesystem.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBList.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBPath.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBRecord.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBTable.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBUtil.h" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/Dropbox.h" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Dropbox" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccount.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccountInfo.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccountManager.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastore.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastoreInfo.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastoreManager.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBError.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFile.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFileInfo.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFileStatus.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFilesystem.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBList.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBPath.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBRecord.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBTable.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBUtil.h" framework="true" />
+        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/Dropbox.h" framework="true" />
         <framework src="libc++.dylib" />
         <framework src="QuartzCore.framework" />
         <framework src="SystemConfiguration.framework" />
