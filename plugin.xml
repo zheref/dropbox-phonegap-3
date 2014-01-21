@@ -14,7 +14,7 @@
             	<param name="ios-package" value="DropboxPlugin" />
             </feature>
         </config-file>
-        <source-file src="src/ios/Classes/AppDelegate.m" />
+        <source-file src="src/ios/Classes/AppDelegate.m" target-dir="src/ios/Classes/AppDelegate.m" />
         <header-file src="src/ios/Plugins/DropboxPlugin.h" />
         <source-file src="src/ios/Plugins/DropboxPlugin.m" />
         <source-file src="src/ios/Frameworks/Dropbox.framework" framework="true" />
