@@ -56,9 +56,9 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)listFolder:(CDVInvokedUrlCommand*)command
+- (void) listFolder: (CDVInvokedUrlCommand*) command
 {
-    NSLog(@"Executing listFolder()");
+    NSLog(@"Executing listFolder() with path '%@'", [command.arguments objectAtIndex: 0]);
     
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult = nil;
@@ -75,6 +75,40 @@
             [dictionary setObject:file.path.stringValue forKey:@"path"];
             [dictionary setObject:[NSNumber numberWithLongLong:[file.modifiedTime timeIntervalSince1970]*1000] forKey:@"modifiedTime"];
             [dictionary setObject:@(file.size) forKey:@"size"];
+            [dictionary setValue:[NSNumber numberWithBool:file.isFolder] forKey:@"isFolder"];
+            [items addObject:dictionary];
+        }
+        
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray: items];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
+}
+
+- (void) syncFolder: (CDVInvokedUrlCommand*) command
+{
+    NSLog(@"Executing syncFolder() with path '%@'", [command.arguments objectAtIndex: 0]);
+    
+    [self.commandDelegate runInBackground:^{
+        CDVPluginResult* pluginResult = nil;
+        NSString* path = [command.arguments objectAtIndex:0];
+        
+        DBPath* newPath = [[DBPath root] childPath:path];
+        NSArray* files = [[DBFilesystem sharedFilesystem] listFolder:newPath error:nil];
+        
+        NSMutableArray *items = [NSMutableArray array];
+
+        for (DBFileInfo* file in files) {
+            NSLog(@"\t%@", file.path.stringValue);
+
+            DBPath* path = file.path;
+
+            DBFile* file = [[DBFilesystem sharedFilesystem] openFile:path error:nil];
+            NSData* data = [file readData: nil];
+            NSString* content = [file readString: nil];
+
+            NSMutableDictionary* dictionary = [[NSMutableDictionary alloc] init];
+            [dictionary setObject:file.path.stringValue forKey:@"path"];
+            [dictionary setObject:content forKey:@"content"];
             [dictionary setValue:[NSNumber numberWithBool:file.isFolder] forKey:@"isFolder"];
             [items addObject:dictionary];
         }

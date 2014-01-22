@@ -15,7 +15,7 @@ var dropbox = (function() {
             },
             pluginName, "sayHello", [""]);
         return deferred.promise();
-    }
+    };
  
     var link = function() {
         var deferred = $.Deferred();
@@ -30,7 +30,7 @@ var dropbox = (function() {
             },
             pluginName, "link", [""]);
         return deferred.promise();
-    }
+    };
  
     var checkLink = function() {
         var deferred = $.Deferred();
@@ -43,7 +43,7 @@ var dropbox = (function() {
             },
             pluginName, "checkLink", [""]);
         return deferred.promise();
-    }
+    };
  
     var unlink = function() {
         var deferred = $.Deferred();
@@ -56,7 +56,7 @@ var dropbox = (function() {
             },
             pluginName, "unlink", [""]);
         return deferred.promise();
-    }
+    };
  
     var listFolder = function(path) {
         var deferred = $.Deferred();
@@ -71,7 +71,22 @@ var dropbox = (function() {
             },
             pluginName, "listFolder", [path]);
         return deferred.promise();
-    }
+    };
+
+    var syncFolder = function(path) {
+        var deferred = $.Deferred();
+
+        cordova.exec(function(result) {
+            console.log("")
+            deferred.resolve(result);
+        }, function(error) {
+            alert("syncFolder error");
+            console.log("syncFolder error");
+            deferred.reject(error);
+        }, pluginName, "syncFolder", [path]);
+
+        return deferred.promise();
+    };
  
     var addObserver = function(path) {
         var deferred = $.Deferred();
@@ -85,7 +100,7 @@ var dropbox = (function() {
             },
             pluginName, "addObserver", [path]);
         return deferred.promise();
-    }
+    };
  
     var readData = function (fileName) {
         var deferred = $.Deferred();
@@ -98,7 +113,7 @@ var dropbox = (function() {
             },
             pluginName, "readData", [fileName]);
         return deferred.promise();
-    }
+    };
  
     var readString = function (fileName) {
         var deferred = $.Deferred();
@@ -111,17 +126,18 @@ var dropbox = (function() {
             },
             pluginName, "readString", [fileName]);
         return deferred.promise();
-    }
+    };
  
     return {
         link: link,
         checkLink: checkLink,
         unlink: unlink,
         listFolder: listFolder,
+        syncFolder: syncFolder,
         addObserver: addObserver,
         readData: readData,
         readString: readString
-    }
+    };
  
 }());
 
