@@ -102,9 +102,9 @@
 
             DBPath* path = file.path;
 
-            DBFile* file = [[DBFilesystem sharedFilesystem] openFile:path error:nil];
-            NSData* data = [file readData: nil];
-            NSString* content = [file readString: nil];
+            DBFile* filex = [[DBFilesystem sharedFilesystem] openFile:path error:nil];
+            NSData* data = [filex readData: nil];
+            NSString* content = [filex readString: nil];
 
             NSMutableDictionary* dictionary = [[NSMutableDictionary alloc] init];
             [dictionary setObject:file.path.stringValue forKey:@"path"];
