@@ -11,18 +11,20 @@
 
 @interface DropboxPlugin : CDVPlugin
 
-- (void) link:(CDVInvokedUrlCommand*)command;
+- (void) link:(CDVInvokedUrlCommand*) command;
 
-- (void) checkLink:(CDVInvokedUrlCommand*)command;
+- (void) checkLink:(CDVInvokedUrlCommand*) command;
 
-- (void) unlink:(CDVInvokedUrlCommand*)command;
+- (void) unlink:(CDVInvokedUrlCommand*) command;
 
-- (void)listFolder:(CDVInvokedUrlCommand*)command;
+- (void) listFolder:(CDVInvokedUrlCommand*) command;
 
-- (void)addObserver:(CDVInvokedUrlCommand*)command;
+- (void) syncFolder:(CDVInvokedUrlCommand*) command;
 
-- (void)readData:(CDVInvokedUrlCommand*)command;
+- (void) addObserver:(CDVInvokedUrlCommand*) command;
 
-- (void)readString:(CDVInvokedUrlCommand*)command;
+- (void) readData:(CDVInvokedUrlCommand*) command;
+
+- (void) readString:(CDVInvokedUrlCommand*) command;
 
 @end
