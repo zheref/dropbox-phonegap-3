@@ -17,24 +17,7 @@
         <source-file src="src/ios/Classes/AppDelegate.m" target-dir="AppDelegate.m" />
         <header-file src="src/ios/Plugins/DropboxPlugin.h" />
         <source-file src="src/ios/Plugins/DropboxPlugin.m" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Dropbox" target-dir="Dropbox.framework" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccount.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccountInfo.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBAccountManager.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastore.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastoreInfo.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBDatastoreManager.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBError.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFile.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFileInfo.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFileStatus.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBFilesystem.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBList.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBPath.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBRecord.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBTable.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/DBUtil.h" target-dir="Dropbox.framework/Headers" framework="true" />
-        <source-file src="src/ios/Frameworks/Dropbox.framework/Headers/Dropbox.h" target-dir="Dropbox.framework/Headers" framework="true" />
+        <framework src="Dropbox.framework" custom="true" />
         <framework src="libc++.dylib" />
         <framework src="QuartzCore.framework" />
         <framework src="SystemConfiguration.framework" />
